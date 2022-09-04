@@ -30,7 +30,7 @@
 }
 
 .Home > h1 > a{
-    color: rgb(174, 37, 192);
+    color: #3F83F8;
     font-family: 'Permanent Marker';
     text-shadow: 4px 4px 4px black;
     font-weight: bold;
@@ -66,6 +66,9 @@
     font-weight: bold;
     color: cornsilk;
 
+}
+.Home > .my-fav{
+    background-color: rgb(26 86 219 / 1);
 }
 
 .Home > button:hover{

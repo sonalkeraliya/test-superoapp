@@ -159,3 +159,23 @@
     font-family: 'Orbitron';
     font-weight: bold;
 }
+.Superhero > button{
+    margin: 10px 10px;
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: darkorange;
+    font-weight: bold;
+    color: cornsilk;
+}
+.quality > button{
+    margin: 10px 10px;
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgb(34,193,195);
+    font-weight: bold;
+    color: cornsilk;
+}

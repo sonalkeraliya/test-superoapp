@@ -51,6 +51,7 @@ export default class superHero extends Component {
     
         SuperHeroDataService.create(data)
           .then(response => {
+            alert("Added SuccessFully")
             this.setState({
               intelligence: response.data.powerstats.intelligence,
               durability: response.data.powerstats.durability,
@@ -104,7 +105,7 @@ export default class superHero extends Component {
         <div className="Superhero">
         <h1>{this.props.details.name}</h1>
         {this.state.submitted ? "Update SuccessFully" : '' }
-        <button type='button'  onClick={this.props.is_fav ?  this.updateSuperHero : this.addToFavList} >{this.props.is_fav ? 'Update SuperHero ' : 'Add To Fav'}</button>
+        
          <img src={this.props.details.image.url} alt={this.props.details.name} /> 
         <h2>Powerstats</h2>
         <div className="quality">
@@ -142,7 +143,8 @@ export default class superHero extends Component {
                     <input   type="text" className="form-control" id="combat"   required  value={this.state.combat}
                             onChange={this.onChangeCombat}    name="combat" />
                   </div>
-            </div>            
+            </div>  
+            <button type='button'  onClick={this.props.is_fav ?  this.updateSuperHero : this.addToFavList} >{this.props.is_fav ? 'Update SuperHero ' : 'Add To Favorites '}</button>          
          </div>
         </div>
     );

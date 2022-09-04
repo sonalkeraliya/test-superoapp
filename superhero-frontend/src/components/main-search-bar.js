@@ -111,7 +111,7 @@ export default class MainSearchBar extends Component {
             
                 <input    onChange={this.onChangeSearchName} value={searchName} id='superhero-name' name='superhero-name' placeholder='Enter Superhero Name' autoComplete="off"/>
                 <button type='button'  onClick={this.searchName} >Go</button>
-                <button type='button'  onClick={this.retrieveFavSuperHeros} >My favourites</button>
+                <button type='button'  onClick={this.retrieveFavSuperHeros} class="my-fav" >My favourites</button>
                 
                 {(!datafound) && 
                  <h1 style={{color:'white', backgroundColor:"rgba(0,0,0,0.5)"}}>Superhero data not present!</h1>
