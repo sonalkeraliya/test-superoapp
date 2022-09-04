@@ -1,7 +1,8 @@
-import http from "../http-common";
+import http from "../api/http-common";
+import superheroE from "../api/superhero-external";
 class SuperHeroDataService {
   getAll() {
-    return http.get("/superheros");
+    return http.get("/superheros/");
   }
   get(id) {
     return http.get(`/superheros/${id}`);
@@ -14,6 +15,9 @@ class SuperHeroDataService {
   }
   delete(id) {
     return http.delete(`/superheros/${id}`);
+  }
+  findByName(name) {
+    return superheroE.get(`/search/${name}`)
   }
  
 }
