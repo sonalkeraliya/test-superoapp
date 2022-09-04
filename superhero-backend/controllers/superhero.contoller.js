@@ -18,20 +18,18 @@ exports.createHero = async (req, res) => {
 }
 
 // Update a Super Hero by the id in the request
-exports.updateHero = async (req, res, next) => {
+exports.updateHero = async (req, res) => {
     
-    let superhero
-    try {
-        superhero = await SuperHero.findById(req.params.id)
-        if (superhero == null) {
-        return res.status(404).json({ message: 'Cannot find superhero' })
-        }
-    } catch (err) {
-        return res.status(500).json({ message: err.message })
+    const hero = await SuperHero.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    
+    if (!hero) {
+        return res.status(400).json({
+            status:'fail'
+        })
     }
-
-    res.superhero = superhero
-    next()
+    res.status(200).json({
+        hero
+    })
 } 
 // Retrieve all Favourite SuperHero from the database.
 
